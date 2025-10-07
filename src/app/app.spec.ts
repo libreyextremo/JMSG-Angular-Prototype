@@ -1,15 +1,33 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 import { App } from './app';
+import { Navbar } from './shared/components/navbar/navbar';
+import { Header } from './shared/components/header/header';
+import { Footer } from './shared/components/footer/footer';
+import { CatalogList } from './features/catalog/components/catalog-list/catalog-list';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([])
+        RouterTestingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        MatCardModule
       ],
       declarations: [
-        App
+        App,
+        Navbar,
+        Header,
+        Footer,
+        CatalogList
       ],
     }).compileComponents();
   });
@@ -20,10 +38,4 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, JMSG-Angular-Prototype');
-  });
 });

@@ -30,12 +30,32 @@ Pending.
 ***
 
 # Structure the project. 
-Pending.
+src/app/
+ ├─ core
+    ├─ config
+        └─ api-endpoints.ts
+    └─ services
+        └─ items-service.ts
+ ├─ features/catalog/components
+    └─ catalog-list
+ ├─ models
+    └─ item.ts
+ ├─ shared/components
+    ├─ footer
+    ├─ header
+    └─ navbar
+ ├─ app-module.ts
+ ├─ app-routing-module.ts
 
 ***
 
 # Styles. 
-Pending.
+src/styles/
+ ├─ _variables.scss   # colors, fonts...
+ ├─ _mixins.scss      # reusable mixins
+ ├─ _reset.scss       # normalize the default styles
+ └─ styles.scss       # main styles file (imports the other ones)
+
 
 ***
 
@@ -87,6 +107,7 @@ Pending.
 
 # 📖 Technologies Used
 • Angular 20: Main framework
+• Angular Material: UI component library for Angular
 • TypeScript: Development language
 • SCSS/SASS: Styles with preprocessor
 • HTML5: Semantic structure

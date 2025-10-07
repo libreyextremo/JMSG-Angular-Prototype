@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #0d47a1; 
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 64px; 
+  }
+  
+  .navbar-title button {
+    color: white;
+    font-size: 18px;
+    text-transform: none;
+  }
+  
+  .navbar-title mat-icon {
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
