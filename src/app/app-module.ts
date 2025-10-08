@@ -1,5 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -13,6 +14,8 @@ import { Header } from './shared/components/header/header';
 import { Navbar } from './shared/components/navbar/navbar';
 import { Footer } from './shared/components/footer/footer';
 import { CatalogList } from './features/catalog/components/catalog-list/catalog-list';
+import { Card } from './shared/components/card/card';
+import { CatalogDetail } from './features/catalog/components/catalog-detail/catalog-detail';
 
 @NgModule({
   declarations: [
@@ -20,10 +23,13 @@ import { CatalogList } from './features/catalog/components/catalog-list/catalog-
     Header,
     Navbar,
     Footer,
-    CatalogList
+    CatalogList,
+    Card,
+    CatalogDetail
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatToolbarModule,
     MatMenuModule,

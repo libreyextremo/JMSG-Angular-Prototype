@@ -1,1 +1,6 @@
-<p>catalog-list works!</p>
+<div class="grid-container">
+    <app-card 
+        *ngFor="let itemlistElement of itemlistElements"
+        [item]="itemlistElement">
+    </app-card>
+</div>

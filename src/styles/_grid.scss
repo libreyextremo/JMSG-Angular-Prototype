@@ -1,0 +1,13 @@
+@mixin responsive-grid($gap: 1rem, $minWidth: 250px, $maxColumns: 5) {
+    display: grid;
+    gap: $gap;
+  
+    grid-template-columns: repeat(auto-fit, minmax($minWidth, 1fr));
+  
+    @media (min-width: calc(#{$minWidth} * #{$maxColumns})) {
+      grid-template-columns: repeat($maxColumns, 1fr);
+    }
+  
+    justify-items: center;
+}
+  
