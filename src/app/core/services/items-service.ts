@@ -15,13 +15,13 @@ export class ItemsService {
    * get items
    */
   getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(`${this.baseUrl}/products`);
+    return this.http.get<Item[]>(`${this.baseUrl}`);
   }
 
   /**
    * get item by id
    */
   getItemsById(id: number): Observable<Item> {
-    return this.http.get<Item>(`${this.baseUrl}/products/${id}`);
+    return this.http.get<Item>(`${this.baseUrl}/${id}`);
   }
 }

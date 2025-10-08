@@ -1,0 +1,23 @@
+<div class="detail-container" *ngIf="itemElement">
+    <mat-card class="detail-card">
+      <mat-card-header>
+        <mat-card-title>{{ itemElement.title }}</mat-card-title>
+        <mat-card-subtitle>{{ itemElement.category }}</mat-card-subtitle>
+      </mat-card-header>
+  
+      <div class="image-wrapper">
+        <img [src]="itemElement.image" [alt]="itemElement.title">
+      </div>
+  
+      <mat-card-content>
+        <p><strong>ID:</strong> {{ itemElement.id }}</p>
+        <p><strong>Description:</strong> {{ itemElement.description }}</p>
+        <p><strong>Price:</strong> ${{ itemElement.price }}</p>
+        <p><strong>Rating:</strong> {{ itemElement.rating.rate }} / 5 ({{ itemElement.rating.count }} reviews)</p>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

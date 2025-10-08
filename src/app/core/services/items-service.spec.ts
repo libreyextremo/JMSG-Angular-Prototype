@@ -62,7 +62,7 @@ describe('ItemsService', () => {
       expect(items[1]).toEqual(mockItems[1]);
     });
 
-    const req = httpMock.expectOne(`${baseUrl}/products`);
+    const req = httpMock.expectOne(`${baseUrl}`);
     expect(req.request.method).toBe('GET');
     req.flush(mockItems);
   });
@@ -75,7 +75,7 @@ describe('ItemsService', () => {
       expect(item).toEqual(mockProduct_0);
     });
 
-    const req = httpMock.expectOne(`${baseUrl}/products/1`);
+    const req = httpMock.expectOne(`${baseUrl}/1`);
     expect(req.request.method).toBe('GET');
     req.flush(mockProduct_0);
   });

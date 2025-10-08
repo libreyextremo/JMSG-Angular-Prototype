@@ -1,0 +1,32 @@
+.product-card {
+    max-width: 300px;
+    margin: 1rem auto;
+    text-align: left;
+    height: 600px;       
+    display: flex;
+    flex-direction: column; 
+  
+    mat-card-content {
+      flex: 1;       
+      overflow: auto;    
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+  
+    .rating {
+      color: #ff9800;
+      margin-top: 0.3rem;
+    }
+  
+    img {
+      object-fit: contain;
+      max-height: 250px;
+    }
+}
+
+.product-card {
+
+}
